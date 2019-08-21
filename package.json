@@ -1,0 +1,14 @@
+{
+  "name": "travelTemplate",
+  "version": "1.0.0",
+  "description": "Template for tour and travel Website.",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass":"node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Haris Mohammad Shah",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.10.0"
+  }
+}

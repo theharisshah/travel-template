@@ -1,0 +1,39 @@
+.feature-box {
+    height: 30rem;
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    padding: 2.5rem;
+    text-align: center;
+    border-radius: .5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .3s;
+    -webkit-transition: transform .3s;
+    -moz-transition: transform .3s;
+    -ms-transition: transform .3s;
+    -o-transition: transform .3s;
+
+    @include respond(tab-port){
+        padding: 2rem;
+    }
+
+    &__icon {
+        font-size: 6rem;
+        line-height: 1.5;
+        margin-bottom: .5rem;
+        display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+        @include respond(tab-port){
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+        -webkit-transform: translateY(-1.5rem) scale(1.03);
+        -moz-transform: translateY(-1.5rem) scale(1.03);
+        -ms-transform: translateY(-1.5rem) scale(1.03);
+        -o-transform: translateY(-1.5rem) scale(1.03);
+    }
+}

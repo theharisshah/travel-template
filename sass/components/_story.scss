@@ -1,0 +1,95 @@
+.story {
+     width : 75%;
+     margin: 0 auto;
+     box-shadow: 0 3rem 6rem rgba($color-black, .1);
+     background-color: rgba($color-white, .7);
+     border-radius: .5rem;
+     padding : 6rem;
+     padding-left: 9rem;
+     font-size: $default-font-size;
+     -webkit-transform: skewX(-12deg);
+     transform: skewX(-12deg);
+
+     @include respond(tab-port) {
+         width: 100%;
+         padding : 4rem;
+         padding-left: 5rem;
+     }
+
+     @include respond(phone) {
+        -webkit-transform: skewX(0);
+        transform: skewX(0);
+     }
+
+     &__shape {
+         width: 15rem;
+         height: 15rem;
+         float: left;
+        -webkit-shape-outside: circle(50% at 50% 50%);
+         shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path : circle(50% at 50% 50%);
+        clip-path : circle(50% at 50% 50%);
+        -webkit-transform: translateX(-3rem) skewX(12deg);
+        transform: translateX(-3rem) skewX(12deg);
+        position: relative;
+
+        @include respond(phone) {
+            -webkit-transform: translateX(-3rem) skewX(0);
+            transform: translateX(-3rem) skewX(0);
+         }
+    
+     }
+
+     &__img--1 {
+         height: 100%;
+         transform: translateX(-2.5rem)  scale(1);
+         transition: all .2s;
+     }
+
+     &__img--2 {
+        height: 100%;
+        transform: translateX(-7rem)  scale(1.1);
+        transition: all .2s;
+    }
+
+     &__text {
+         -webkit-transform: skewX(12deg);
+         transform: skewX(12deg);
+         @include respond(phone) {
+            -webkit-transform: skewX(0);
+            transform: skewX(0);
+         } 
+     }
+
+     &__caption {
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, 20%);
+         color: $color-white;
+         text-transform: uppercase;
+         font-size: 1.7rem;
+         text-align: center;
+         opacity: 0;
+         transition: all .5s;
+         backface-visibility: hidden;
+     }
+
+     &:hover &__caption {
+         opacity: 1;
+         transform: translate(-50%,-50%);
+     }
+
+     &:hover &__img--1 {
+         -webkit-transform: translateX(-2.5rem) scale(.8);
+        transform: translateX(-2.5rem) scale(.8);
+        filter: blur(4px) brightness(70%);
+        outline: red;
+     }
+
+     &:hover &__img--2 {
+        -webkit-transform: translateX(-7rem) scale(.9);
+        transform: translateX(-7rem) scale(.9);
+       filter: blur(4px) brightness(70%);
+    }
+}
