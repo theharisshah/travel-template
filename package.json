@@ -4,11 +4,11 @@
   "description": "Template for tour and travel Website.",
   "main": "index.js",
   "scripts": {
-    "compile:sass":"node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Haris Mohammad Shah",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "node-sass": "^4.10.0"
   }
 }
